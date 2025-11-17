@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d97f71b8c9.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Just Use HTML, CSS, JS</title>
+  </head>
+  <body onLoad="clock()">
+    <nav>
+      <h1 class="title" data-value="Just use HTML, CSS, JS">
+        Just use HTML, CSS, JS
+      </h1>
+      <p>&nbsp;&nbsp;</p>
+    </nav>
+    <div id="grid">
+      <div class="square" id="top">top</div>
+      <div class="square" id="opis">
+        <h2>Manifest</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem odit
+          ad vero quia ipsam quam dignissimos commodi reprehenderit cumque minus
+          eveniet, eos fugiat tempore autem nostrum vitae amet. Sapiente, natus.
+          <span style="color: rgb(190, 189, 189)"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            odit ad vero quia ipsam quam dignissimos commodi reprehenderit
+            cumque minus eveniet, eos fugiat tempore autem nostrum vitae amet.
+            Sapiente, natus.
+          </span>
+          <span style="color: rgb(126, 126, 126)"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            odit ad vero quia ipsam quam dignissimos commodi reprehenderit
+            cumque minus eveniet, eos fugiat tempore autem nostrum vitae amet.
+            Sapiente, natus.
+          </span>
+        </p>
+      </div>
+      <div class="square" id="ttt">
+        <div id="turn" class="display-turn playerX">X's turn</div>
+        <div id="tictactoe">
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+          <div id="tile"></div>
+        </div>
+        <div id="reset">Reset</div>
+      </div>
+      <div class="square" id="wave">
+        <div class="svg1"></div>
+        <div class="svg2"></div>
+      </div>
+      <div class="square" id="burger">
+        <div class="burgerIcon">
+          <i class="fa-solid fa-bars icon"></i>
+        </div>
+        <div class="slider hide">
+          <div class="formTitle">
+            For more <span style="color: #1e93ab">Information</span>.
+          </div>
+          <form>
+            <label for="name">Enter your name here</label>
+            <input type="text" required id="name" placeholder="Name" />
+            <label for="email">Enter your email here:</label>
+            <input type="email" required id="email" placeholder="Email" />
+            <label for="message">Enter your message here</label>
+            <input type="text" id="message" placeholder="message" />
+            <label>Select your rating:</label>
+            <div class="radio">
+              <input
+                type="radio"
+                required
+                name="rating"
+                id="1star"
+                value="1/5"
+              />
+              <input
+                type="radio"
+                required
+                name="rating"
+                id="2star"
+                value="2/5"
+              />
+              <input
+                type="radio"
+                required
+                name="rating"
+                id="3star"
+                value="3/5"
+              />
+              <input
+                type="radio"
+                required
+                name="rating"
+                id="4star"
+                value="4/5"
+              />
+              <input
+                type="radio"
+                required
+                name="rating"
+                id="5star"
+                value="5/5"
+              />
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="square" id="click">
+        <div class="counter">1</div>
+        <div class="counterBtn">Click Me!</div>
+      </div>
+      <div class="square" id="resolution">
+        <div class="yourRes">Your Resolution is:</div>
+        <div class="res">
+          <div class="resX"></div>
+          <div class="resS" style="color: #1e93ab">x</div>
+          <div class="resY"></div>
+        </div>
+      </div>
+      <div class="square" id="photo">
+        <div class="slide"></div>
+        <br />
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+      </div>
+      <div class="square" id="time">
+        <div id="timedate">
+          <a id="mon">January</a>
+          <a id="d">1</a>, <a id="y">0</a><br />
+          <a id="h">12</a> : <a id="m">00</a> : <a id="s">00</a> :
+          <a id="mi">000</a>
+        </div>
+      </div>
+      <div class="square" id="bottom">bottom</div>
+    </div>
+    <footer>
+      <h3>by <span style="color: #1e93ab">Michał Kotra</span></h3>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

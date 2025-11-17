@@ -1,0 +1,467 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  top: 0;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  bottom: 0;
+}
+
+#grid {
+  display: grid;
+  height: 140vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr repeat(6, 1fr) 0.5fr;
+  grid-template-areas:
+    "top top top top"
+    "form photo photo click"
+    "form photo photo resolution"
+    "form photo photo time"
+    "form photo photo time"
+    "opis ttt wave wave"
+    "opis ttt wave wave"
+    "bottom bottom bottom bottom";
+  scrollbar-width: none;
+  .square {
+    background: #313131;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(58, 58, 58);
+  }
+
+  #top {
+    grid-area: top;
+  }
+
+  #opis {
+    grid-area: opis;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 30px;
+    overflow-y: scroll;
+    // scrollbar-color: red orange;
+    scrollbar-width: none;
+    h2 {
+      font-size: 30px;
+      color: #1e93ab;
+      margin: 0;
+    }
+  }
+
+  #ttt {
+    grid-area: ttt;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    #turn {
+      font-size: 20px;
+      height: 5px;
+    }
+
+    #tictactoe {
+      width: 50%;
+      height: 50%;
+      display: grid;
+
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+
+      #tile {
+        min-width: 0.5vw;
+        aspect-ratio: 1/1;
+        background-color: #616161;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 5px;
+        font-weight: bold;
+
+        &:hover {
+          background-color: #777;
+        }
+      }
+      .X {
+        color: #1e93ab;
+      }
+    }
+
+    #reset {
+      width: 40%;
+      height: 10%;
+      border-radius: 50px;
+      background-color: rgb(37, 37, 37);
+      color: white;
+      font-size: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 5px;
+      &:hover {
+        background-color: #444;
+      }
+    }
+  }
+
+  #wave {
+    grid-area: wave;
+    background-color: #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    .svg1 {
+      background: url(./waveR2.svg) repeat-x;
+
+      width: 100%;
+      height: 50%;
+      animation: wave linear 20s infinite;
+    }
+    .svg2 {
+      background: url(./wave.svg) repeat-x;
+
+      width: 100%;
+      height: 50%;
+
+      animation: wave linear 20s infinite;
+    }
+  }
+
+  #burger {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    transition: all 0.5s ease;
+
+    i {
+      height: 10%;
+      width: auto;
+      margin-left: 20px;
+      transition: all 0.5s ease;
+    }
+    .hide {
+      transform: translateX(-100%);
+    }
+    .slider {
+      width: 80%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow-y: hidden;
+      padding: 0 10%;
+      transition: all 0.5s ease;
+      //   background-color: #373737;
+      .radio {
+        display: flex;
+      }
+      input {
+        background-color: #313131;
+        color: white;
+        width: 80%;
+        height: 30px;
+        margin: 10px 0;
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 30px;
+        border: none;
+      }
+      input[type="radio"] {
+        vertical-align: middle;
+      }
+
+      button {
+        width: 90%;
+        height: 50px;
+        font-size: 20px;
+        text-align: center;
+        background-color: #313131;
+        border-radius: 30px;
+        border: none;
+        color: #616161;
+        margin-top: 10px;
+      }
+      label {
+        color: white;
+        font-size: 15px;
+      }
+      .formTitle {
+        text-align: center;
+        font-size: 20px;
+      }
+    }
+  }
+
+  #click {
+    grid-area: click;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    .counter {
+      width: 25%;
+      height: 70%;
+      background-color: white;
+      color: #313131;
+      border-radius: 40px 0 0 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .counterBtn {
+      width: 55%;
+      height: 70%;
+      background-color: #616161;
+      border-radius: 0 40px 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: #777;
+      }
+    }
+  }
+
+  #resolution {
+    grid-area: resolution;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    font-weight: bold;
+
+    .yourRes {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .res {
+      width: 80%;
+      font-size: 50px;
+      height: 70%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      div {
+        font-size: inherit;
+      }
+    }
+  }
+
+  #photo {
+    grid-area: photo;
+    display: flex;
+
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    .slide {
+      width: 100%;
+      height: 100%;
+      background: white no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      cursor: pointer;
+      color: white;
+    }
+    .slide:nth-of-type(1) {
+      background-image: url("./photo2.jpg");
+    }
+
+    .slide:nth-of-type(2) {
+      background-image: url("./photo3.jpg");
+    }
+
+    .slide:nth-of-type(3) {
+      background-image: url("./photo4.jpg");
+    }
+
+    .slide:nth-of-type(4) {
+      background-image: url("./photo5.jpg");
+    }
+
+    .slide:nth-of-type(5) {
+      background-image: url("./photo6.jpg");
+    }
+  }
+
+  #time {
+    grid-area: time;
+    #d,
+    #mon {
+      color: #1e93ab;
+      font-weight: bold;
+    }
+  }
+
+  #bottom {
+    grid-area: bottom;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@media (max-width: 1200px) {
+  nav,
+  footer {
+    font-size: 14px;
+  }
+
+  #grid {
+    display: grid;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr 2fr 1fr 1fr 0.5fr 5fr 1fr 1fr 0.25fr;
+    grid-template-areas:
+      "top"
+      "photo"
+      "form"
+      "click"
+      "resolution"
+      "time"
+      "ttt"
+      "opis"
+      "wave"
+      "bottom";
+  }
+  nav,
+  footer {
+    height: 15vh;
+  }
+
+  #grid .square {
+    font-size: 20px;
+  }
+
+  #top,
+  #bottom {
+    height: 15vh;
+  }
+
+  #burger {
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
+    #input {
+      width: 100%;
+    }
+  }
+
+  #burger .slider {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  #photo .slide {
+    height: 50vh;
+    background-position: center;
+  }
+
+  #click {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #click .counter,
+  #click .counterBtn {
+    width: 80%;
+    height: 50px;
+    border-radius: 30px;
+  }
+
+  #resolution {
+    flex-direction: column;
+    font-size: 30px;
+    gap: 5px;
+
+    .res {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #ttt {
+    #tictactoe {
+      aspect-ratio: 1/1;
+      overflow: hidden;
+    }
+  }
+  #tile {
+    font-size: 40px;
+  }
+
+  #wave {
+    align-items: center;
+  }
+
+  #opis {
+    padding: 15px;
+    font-size: 14px;
+  }
+}
