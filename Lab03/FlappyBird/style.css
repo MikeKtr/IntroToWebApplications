@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixelify Sans", sans-serif;
+  color: white;
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  background-color: darkcyan;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game {
+  width: 500px;
+  height: 700px;
+  background: url("./assets/Flappy Bird/background-day.png");
+  background-position-y: -150px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 10px solid black;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bird {
+  width: 34px;
+  height: 24px;
+  background: url("./assets/Flappy Bird/yellowbird-midflap.png") no-repeat;
+  background: url("./assets/Sound\ Efects/die.ogg");
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  z-index: 2;
+
+  animation: flap 0.5s linear 0s infinite alternate;
+}
+
+.pipe {
+  width: 70px;
+  background: url("./assets/Flappy Bird/pipe-green.png");
+  background-size: cover;
+  position: absolute;
+}
+
+.pipe_up {
+  transform: scaleY(-1);
+}
+
+.score {
+  position: absolute;
+  width: 100%;
+  top: 40px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  z-index: 9;
+  transition: "transform 2s linear";
+}
+
+.start_popup {
+  background: url("./assets/UI/message.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+}
+
+.end_popup {
+  background-color: rgb(172, 178, 130);
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: -450px;
+  transition: transform 0.3s ease-out;
+  border: 7px solid black;
+  border-radius: 50px;
+}
+
+img {
+  height: 70px;
+}
+
+.best_score,
+.your_score,
+.press {
+  width: 100%;
+  font-size: 45px;
+  text-align: center;
+}
+
+.endPopupSlide {
+  transform: translateY(600px);
+}
+
+.inv {
+  display: none;
+}
+
+@keyframes flap {
+  0% {
+    background: url(./assets/Flappy\ Bird/yellowbird-downflap.png);
+  }
+  50% {
+    background: url(./assets/Flappy\ Bird/yellowbird-midflap.png);
+  }
+  100% {
+    background: url(./assets/Flappy\ Bird/yellowbird-upflap.png);
+  }
+}

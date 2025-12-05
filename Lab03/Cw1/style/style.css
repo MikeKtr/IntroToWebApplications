@@ -1,0 +1,67 @@
+.body {
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+}
+
+.stopwatch {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timer {
+  width: 50vh;
+  height: 30vh;
+  background-color: plum;
+  border-radius: 30px;
+  margin: 5vh;
+  font-weight: bold;
+  font-size: 100px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls {
+  width: 60vh;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: thistle;
+  border-radius: 30px;
+
+  color: black;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.start,
+.stop {
+  width: 20vh;
+  height: 5vh;
+
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.start {
+  background-color: green;
+}
+.stop {
+  background-color: red;
+}
+.reset {
+  width: 20vh;
+  height: 5vh;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}

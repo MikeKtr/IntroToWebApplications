@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css" />
+  </head>
+  <body>
+    <input
+      type="text"
+      name="Search"
+      id="search"
+      placeholder="Wyszukaj produkt"
+    />
+    <select name="Sort" id="sort">
+      <option value="original">Oryginalna kolejność</option>
+      <option value="asc">Rosnąco (tytuł)</option>
+      <option value="desc">Malejąco (tytuł)</option>
+    </select>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Index</th>
+          <th>Nazwa</th>
+          <th>Opis</th>
+          <th>Zdjęcie</th>
+        </tr>
+      </thead>
+      <tbody class="tableBody"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
