@@ -1,0 +1,21 @@
+{
+  "name": "microservices-bookstore-root",
+  "version": "1.0.0",
+  "description": "Root project for three microservices",
+  "main": "index.js",
+  "scripts": {
+    "start:users": "npm start --prefix Cw3",
+    "start:books": "npm start --prefix Cw1",
+    "start:orders": "npm start --prefix Cw2",
+    "start:all": "concurrently \"npm run start:users\" \"npm run start:books\" \"npm run start:orders\""
+  },
+  "keywords": [
+    "microservices",
+    "node"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
